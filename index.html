@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editora Êxodo - Publicando fé, propósito e transformação</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Configuração customizada das cores do seu projeto no Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#bd7438',   // Laranja/Bronze
+                        bgLight: '#f9f6f0',   // Bege claro
+                        textDark: '#304254',  // Azul ardósia escuro
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ajuste fino para a seleção de texto solicitada no código */
+        ::selection {
+            background-color: #bd7438;
+            color: white;
+        }
+    </style>
+</head>
+<body class="min-h-screen font-sans bg-bgLight text-textDark">
+
+    <nav class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                    <img src="https://github.com/exodoeditora/exodoeditora/raw/main/logo_caramelo.png" alt="Editora Êxodo" class="h-12 w-auto object-contain">
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="font-medium text-textDark hover:text-primary transition-colors duration-200">Início</a>
+                    <a href="#sobre" class="font-medium text-textDark hover:text-primary transition-colors duration-200">Sobre a Editora</a>
+                    <a href="#servicos" class="font-medium text-textDark hover:text-primary transition-colors duration-200">Serviços</a>
+                    <a href="#livros" class="font-medium text-textDark hover:text-primary transition-colors duration-200">Livros</a>
+                    <a href="https://wa.me/+5521992705516" target="_blank" rel="noreferrer" class="px-5 py-2.5 rounded-full text-white bg-primary font-medium hover:opacity-90 transition-opacity shadow-md">
+                        Fale Conosco
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="p-2 rounded-md focus:outline-none text-textDark">
+                        <i data-lucide="menu" id="menu-icon" class="w-7 h-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#inicio" class="block font-medium text-textDark hover:text-primary py-2 transition-colors">Início</a>
+            <a href="#sobre" class="block font-medium text-textDark hover:text-primary py-2 transition-colors">Sobre a Editora</a>
+            <a href="#servicos" class="block font-medium text-textDark hover:text-primary py-2 transition-colors">Serviços</a>
+            <a href="#livros" class="block font-medium text-textDark hover:text-primary py-2 transition-colors">Livros</a>
+            <a href="https://wa.me/+5521992705516" target="_blank" rel="noreferrer" class="inline-block w-full text-center px-5 py-2.5 rounded-full text-white bg-primary font-medium hover:opacity-90 transition-opacity shadow-md mt-2">
+                Fale Conosco
+            </a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="pt-32 pb-20 lg:pt-40 lg:pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+        <div class="flex-1 text-center lg:text-left space-y-8">
+            <div class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide uppercase bg-[#f0e6d8] text-primary">
+                Editora Cristã
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-textDark">
+                Publicando fé, propósito <br class="hidden lg:block"/> e <span class="text-primary">transformação.</span>
+            </h1>
+            <p class="text-lg sm:text-xl max-w-2xl mx-auto lg:mx-0 leading-relaxed text-[#5a6c7d]">
+                Somos uma editora cristã comprometida em levar o evangelho por meio da palavra escrita. Toque vidas com histórias que refletem o amor de Deus.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
+                <a href="#livros" class="px-8 py-4 rounded-full text-white bg-primary font-bold text-lg hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+                    Conheça nossos livros <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+        <div class="flex-1 relative w-full max-w-lg lg:max-w-none">
+            <div class="aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative">
+                <div class="absolute inset-0 bg-gradient-to-tr from-[#bd7438] to-[#e8a876] opacity-90 mix-blend-multiply"></div>
+                <img 
+                    src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&q=80&w=1600" 
+                    alt="Bíblia e Estudo" 
+                    class="w-full h-full object-cover"
+                />
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <i data-lucide="book-open" class="text-white opacity-50 w-24 h-24"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 relative overflow-hidden bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="flex-1 space-y-6 text-[#f9f6f0]">
+                    <h2 class="text-sm font-bold tracking-[0.2em] uppercase opacity-80">Conheça a Editora Êxodo</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold leading-tight">
+                        Cada livro publicado é fruto de oração e excelência editorial.
+                    </h3>
+                    <div class="w-20 h-1 bg-[#f9f6f0] opacity-50 rounded-full my-6"></div>
+                    <p class="text-lg opacity-90 leading-relaxed">
+                        Temos uma missão clara: tocar vidas com histórias que refletem o amor e o propósito de Deus. Trabalhamos lado a lado com nossos autores cristãos para garantir que cada palavra leve a mensagem certa aos corações dos leitores.
+                    </p>
+                </div>
+                <div class="flex-1 grid grid-cols-2 gap-4 w-full">
+                    <div class="space-y-4 mt-8">
+                        <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20 text-[#f9f6f0]">
+                            <h4 class="text-4xl font-black mb-2">Fé</h4>
+                            <p class="opacity-80 text-sm">Ouvindo o chamado para propagar a palavra.</p>
+                        </div>
+                        <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20 text-[#f9f6f0]">
+                            <h4 class="text-4xl font-black mb-2">Missão</h4>
+                            <p class="opacity-80 text-sm">Alcançar vidas através da literatura.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-[#f9f6f0] p-6 rounded-2xl shadow-xl text-[#304254]">
+                            <h4 class="text-4xl font-black mb-2 text-primary">Ação</h4>
+                            <p class="opacity-80 text-sm">Transformando manuscritos em obras de excelência.</p>
+                        </div>
+                        <div class="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20 text-[#f9f6f0]">
+                            <h4 class="text-4xl font-black mb-2">Amor</h4>
+                            <p class="opacity-80 text-sm">Cada projeto feito com dedicação e carinho.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-sm font-bold tracking-[0.2em] uppercase mb-3 text-primary">Nossos Serviços</h2>
+            <h3 class="text-3xl md:text-4xl font-bold mb-16 text-textDark">Como ajudamos seu livro a nascer</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <div class="p-8 rounded-3xl border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 group cursor-default bg-bgLight">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto bg-white shadow-sm text-primary group-hover:scale-110 transition-transform">
+                        <i data-lucide="pen-tool" class="w-9 h-9"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-textDark">Revisão e Copidesque</h4>
+                    <p class="text-gray-600 leading-relaxed">Aprimoramos seu texto mantendo a sua essência e voz, com foco na clareza e ortografia.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 group cursor-default bg-bgLight">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto bg-white shadow-sm text-primary group-hover:scale-110 transition-transform">
+                        <i data-lucide="layout" class="w-9 h-9"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-textDark">Diagramação</h4>
+                    <p class="text-gray-600 leading-relaxed">Design interno profissional para proporcionar a melhor experiência de leitura.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl border border-gray-100 hover:border-primary/30 hover:shadow-xl transition-all duration-300 group cursor-default bg-bgLight">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto bg-white shadow-sm text-primary group-hover:scale-110 transition-transform">
+                        <i data-lucide="book-open" class="w-9 h-9"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4 text-textDark">Publicação</h4>
+                    <p class="text-gray-600 leading-relaxed">Cuidamos de todo o processo burocrático e prático para o seu livro chegar às prateleiras.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="livros" class="py-24 bg-bgLight">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-8 mb-24">
+            <i data-lucide="book-open" class="mx-auto text-primary w-12 h-12"></i>
+            <h2 class="text-3xl md:text-5xl font-bold text-textDark">Pronto para impactar o mundo?</h2>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+                Conheça as obras que já publicamos ou traga o seu manuscrito para avaliarmos. Estamos ansiosos para ler a sua história.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+                <a href="https://wa.me/+5521992705516" target="_blank" rel="noreferrer" class="px-8 py-4 rounded-full text-white bg-textDark font-bold text-lg hover:shadow-lg transition-all">
+                    Quero publicar meu livro
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <h3 class="text-4xl md:text-5xl font-bold tracking-tight text-textDark">
+                    Nossos <span class="font-serif italic font-normal text-primary">Livros</span>
+                </h3>
+                <div class="flex items-center justify-center gap-2 my-6">
+                    <div class="h-px w-12 bg-gray-300"></div>
+                    <div class="w-2 h-2 rotate-45 bg-primary"></div>
+                    <div class="h-px w-12 bg-gray-300"></div>
+                </div>
+                <p class="max-w-2xl mx-auto text-gray-600">
+                    Cada título é uma mensagem de fé, esperança e transformação na UICLAP.
+                </p>
+            </div>
+
+            <div id="books-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                </div>
+        </div>
+    </section>
+
+    <footer class="pt-16 pb-8 bg-textDark text-[#f9f6f0]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-white/10 pb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <img src="https://github.com/exodoeditora/exodoeditora/raw/main/logo_branco.png" alt="Editora Êxodo" class="h-10 w-auto object-contain">
+                    </div>
+                    <p class="opacity-70 max-w-xs">Publicando fé, propósito e transformação por meio da palavra escrita.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Navegação</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="#inicio" class="hover:text-primary transition-colors">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-primary transition-colors">Sobre nós</a></li>
+                        <li><a href="#servicos" class="hover:text-primary transition-colors">Serviços</a></li>
+                        <li><a href="#livros" class="hover:text-primary transition-colors">Livros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-white">Contatos</h4>
+                    <div class="space-y-3 opacity-80">
+                        <a href="https://wa.me/+5521992705516" target="_blank" rel="noreferrer" class="flex items-center gap-3 hover:text-primary transition-colors">
+                            <i data-lucide="message-circle" class="w-[18px] h-[18px]"></i> (21) 99270-5516
+                        </a>
+                        <a href="mailto:exodoeditora@gmail.com" class="flex items-center gap-3 hover:text-primary transition-colors">
+                            <i data-lucide="mail" class="w-[18px] h-[18px]"></i> exodoeditora@gmail.com
+                        </a>
+                        <a href="https://www.instagram.com/editoraexodo_" target="_blank" rel="noreferrer" class="flex items-center gap-3 hover:text-primary transition-colors">
+                            <i data-lucide="instagram" class="w-[18px] h-[18px]"></i> @editoraexodo_
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm opacity-50">
+                <p>&copy; <span id="year"></span> Editora Êxodo. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Dados dos Livros Publicados Atualizados com os Links Oficiais do seu Repositório GitHub
+        const publishedBooks = [
+            {
+                author: "Samuel Menezes",
+                title: "Identidade",
+                subtitle: "Obtendo o caráter de Cristo",
+                desc: "Em tempos marcados por crises de valores e incertezas sobre quem realmente somos, o pastor Samuel Menezes apresenta uma reflexão profunda e transformadora.",
+                cover: "https://github.com/exodoeditora/exodoeditora/raw/main/identidade.jpg",
+                link: "https://loja.uiclap.com/titulo/ua119152/"
+            },
+            {
+                author: "Samuel Eleutério",
+                title: "O Improvável",
+                subtitle: "Fé além da lógica",
+                desc: "Um convite à fé que desafia a lógica e rompe as barreiras do impossível, conduzindo o leitor a refletir sobre como Deus age onde não há saída humana.",
+                cover: "https://github.com/exodoeditora/exodoeditora/raw/main/improvavel.jpg",
+                link: "https://loja.uiclap.com/titulo/ua122428/"
+            },
+            {
+                author: "Sérgio Rodrigo",
+                title: "Sem Truque",
+                subtitle: "A Bíblia é Suficiente",
+                desc: "Um chamado urgente de volta à essência do Evangelho e uma reflexão profunda sobre a suficiência das Escrituras em meio a uma geração de discursos vazios.",
+                cover: "https://github.com/exodoeditora/exodoeditora/raw/main/sem_truque.jpg",
+                link: "https://loja.uiclap.com/titulo/ua122878/"
+            },
+            {
+                author: "Josimar Furtado",
+                title: "Vai Tudo Bem?",
+                subtitle: "Baseado em fatos reais",
+                desc: "Como manter a paz e a confiança no coração? Uma jornada de fé e esperança que revela como descansar nas promessas de Deus mesmo na adversidade.",
+                cover: "https://github.com/exodoeditora/exodoeditora/raw/main/vai_tudo_bem.jpg",
+                link: "https://loja.uiclap.com/titulo/ua123380/"
+            },
+            {
+                author: "Bruno Almeida",
+                title: "O Deus que anda ao lado",
+                subtitle: "Inspirado no Salmo 124",
+                desc: "Uma jornada espiritual profunda revelando a presença constante e inabalável de Deus em meio às lutas e incertezas da vida cotidiana.",
+                cover: "https://github.com/exodoeditora/exodoeditora/raw/main/o_Deus_que_anda_ao_lado.jpg",
+                link: "https://loja.uiclap.com/titulo/ua125713/"
+            },
+            {
+                author: "Enéas Xavier",
+                title: "Não Temas",
+                subtitle: "Dominados pelo Medo ou Pela Palavra?",
+                desc: "A quem você tem dado ouvidos: ao grito do medo ou à voz da Palavra? Um convite ao confronto espiritual e renovação da mente através das Escrituras.",
+                cover: "https://github.com/exodoeditora/exodoeditora/raw/main/nao_temas.jpg",
+                link: "https://loja.uiclap.com/titulo/ua137733/"
+            },
+            {
+                author: "Raquel Assis",
+                title: "Identidade Redimida",
+                subtitle: "O projeto original do Criador",
+                desc: "Um convite urgente para uma viagem de volta ao projeto original do Criador para a sua vida, redimindo sua essência de aprovações externas.",
+                cover: "https://github.com/exodoeditora/exodoeditora/raw/main/identidade_redimida.jpg",
+                link: "https://loja.uiclap.com/titulo/ua140189/"
+            },
+            {
+                author: "Bárbara Leôncio",
+                title: "Da Rejeição à Adoção",
+                subtitle: "Uma pista sinuosa da própria história",
+                desc: "A partir da dor do abandonment e da força de uma mãe sobrevivente, a autora descreve como a corrida se tornou linguagem de cura e sobrevivência.",
+                cover: "https://github.com/exodoeditora/exodoeditora/raw/main/da_rejeicao_a_adocao.jpg",
+                link: "https://loja.uiclap.com/titulo/ua165810/"
+            }
+        ];
+
+        // Renderizar a Grid de Livros de Forma Dinâmica
+        const booksGrid = document.getElementById('books-grid');
+        publishedBooks.forEach(book => {
+            const subtitleHtml = book.subtitle ? `<p class="text-xs italic text-gray-500 mb-3">${book.subtitle}</p>` : '';
+            const card = `
+                <div class="bg-white p-5 flex flex-col shadow-sm hover:shadow-2xl transition-all duration-300 border border-[#e5dfd3] hover:-translate-y-2 group">
+                    <div class="overflow-hidden mb-5">
+                        <img 
+                            src="${book.cover}" 
+                            alt="Capa de ${book.title}" 
+                            class="w-full aspect-[2/3] object-cover shadow-md bg-gray-100 group-hover:scale-105 transition-transform duration-500"
+                        />
+                    </div>
+                    <span class="text-[10px] tracking-widest uppercase text-gray-400 mb-1">${book.author}</span>
+                    <h4 class="font-bold text-lg leading-tight mb-1 text-textDark">${book.title}</h4>
+                    ${subtitleHtml}
+                    <p class="text-sm text-gray-600 line-clamp-3 mb-5 flex-grow">${book.desc}</p>
+                    <a 
+                        href="${book.link}"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="text-xs font-bold uppercase tracking-widest mt-auto inline-flex items-center gap-1 text-primary hover:opacity-70 transition-opacity"
+                    >
+                        Ver na UICLAP <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                    </a>
+                </div>
+            `;
+            booksGrid.innerHTML += card;
+        });
+
+        // 2. Lógica de Abertura/Fechamento do Menu Responsivo (Mobile)
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        let isMenuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if(isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            // Recarrega o ícone do Lucide específico alterado
+            lucide.createIcons();
+        });
+
+        // Fecha o menu mobile automaticamente ao clicar em algum link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                isMenuOpen = false;
+                lucide.createIcons();
+            });
+        });
+
+        // 3. Atualizar o ano automaticamente no Footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Inicializar todos os ícones do Lucide no carregamento inicial da página
+        lucide.createIcons();
+    </script>
+</body>
+</html>
